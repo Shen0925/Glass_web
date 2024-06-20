@@ -1,164 +1,176 @@
-/* 基本布局样式 */
-body {
-  font-family: 'Arial', sans-serif;
-  background: #f4f4f4;
-  margin: 0;
-  padding: 0;
+
+/* 导航条样式 */
+.navbar {
+    background-color: #343a40 !important;
 }
 
-/* 页面标题区域样式 */
-.page-heading {
-  background: #fff;
-  padding: 20px 0;
-  border-bottom: 1px solid #ccc;
+.navbar-brand {
+    font-family: 'Georgia', serif;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #ffffff !important;
 }
 
-.page-heading .inner-content {
-  text-align: center;
-  padding: 20px;
+.navbar-nav .nav-link {
+    color: #ffffff !important;
 }
 
-.page-heading img {
-  margin-top: 20px;
-  max-height: 200px; /* 控制图片高度 */
-  width: auto; /* 图片宽度自适应 */
+.navbar-nav .nav-link:hover {
+    color: #c0c0c0 !important;
+}
+
+/* 欢迎区域样式 */
+.welcome-area {
+    position: relative;
+    width: 100%;
+    height: auto; /* 根据实际图片高度调整 */
+  }
+  
+  .welcome-area img.full-width {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .welcome-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 64px; /* 调整字体大小以适应设计 */
+    font-family: 'Great Vibes', cursive; /* 这是一种艺术字体的示例，可以更换 */
+    text-align: center;
+  }
+  
+  /* 载入Google字体库中的艺术字体 */
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+
+/* 内容文本样式 */
+.inner-content {
+    position: relative; /* 移除绝对定位 */
+    transform: none;
+    text-align: center;
+    color: black;  /* 改为黑色确保可见性 */
+    width: 100%;
+}
+
+.inner-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+.inner-content span {
+    font-size: 1.5rem;
+    font-style: italic;
+    display: block;
+    margin-top: 0.5em;
 }
 
 /* 联系区域样式 */
 .contact-us {
-  background: #ffffff;
-  padding: 40px 0;
+    background: #ffffff;
+    padding: 40px 0;
+    width: 100%;
 }
 
 .section-heading {
-  margin-bottom: 20px;
-  text-align: center;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .section-heading h2 {
-  color: #333;
-  font-size: 24px;
+    color: #333;
+    font-size: 24px;
 }
 
 .section-heading span {
-  color: #555;
-  font-size: 16px;
+    color: #555;
+    font-size: 16px;
 }
 
 /* 表单样式 */
 form {
-  background: #f8f8f8;
-  padding: 20px;
-  border-radius: 8px;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 input[type="text"],
 textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 button.main-dark-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button.main-dark-button:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
 
 /* 底部页脚样式 */
-.footer {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-  margin-top: 40px;
-}
 
-.footer p {
-  margin: 10px 0;
-}
+.footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .footer p {
+    margin-bottom: 5px;
+  }
+  
+  .footer i {
+    margin-right: 5px;
+  }
+  
+  .footer .fab {
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer .fab:hover {
+    color: var(--secondary-color);
+  }
+  
+  
+  .footer .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer .col-md-4 a {
+    display: inline-block;
+    margin: 10px 0;
+  }
 
 /* 媒体查询，确保响应式布局 */
 @media (max-width: 768px) {
-  .page-heading .inner-content,
-  .contact-us {
-      padding: 20px;
-  }
+    .page-heading,
+    .contact-us,
+    .footer {
+        padding: 20px;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 修改底栏内容样式 */
-.footer {
-  background-color: #343a40;
-  color: #fff;
-  padding: 60px 0;
-  text-align: center; /* 确保底栏内容居中 */
-}
-
-.footer p {
-  margin-bottom: 5px;
-}
-
-.footer i {
-  margin-right: 5px;
-}
-
-
-.footer {
-  padding: 20px 0;
-}
-
-.footer .btn-primary {
-  margin-top: 10px;
-}
-
-.footer .col-md-4 h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-}
-
-.footer .col-md-4 ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.footer .col-md-4 ul li {
-  margin-bottom: 10px;
-}
-
-.footer .col-md-4 ul li a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.footer .col-md-4 ul li a:hover {
-  text-decoration: underline;
-}
-
-
-
-
